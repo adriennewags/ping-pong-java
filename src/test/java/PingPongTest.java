@@ -4,6 +4,14 @@ import static org.junit.Assert.*;
 public class PingPongTest {
 
     @Test
+    public void validateInput_checkThatUserInputIsInteger_true() {
+        PingPong testPingPong = new PingPong();
+
+        assertEquals(true, testPingPong.validateInput("5"));
+        assertEquals(true, testPingPong.validateInput("-22"));
+    }
+
+    @Test
     public void pingPong_forLengthOfArrayList_true() {
         PingPong testPingPong = new PingPong();
 
@@ -16,6 +24,14 @@ public class PingPongTest {
         assertEquals(1, testPingPong.pingPong(1).userInput);
         }
 */
+    @Test
+    public void pingPong_NumbersEndingAtUserInput_true() {
+        PingPong testPingPong = new PingPong();
+
+        assertEquals("1", testPingPong.pingPong(1).get(0));
+    }
+
+
     @Test
     public void pingPong_ForNumbersDivisbleByThreeAndFive_true(){
         PingPong testPingPong = new PingPong();

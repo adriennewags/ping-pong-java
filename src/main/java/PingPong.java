@@ -6,9 +6,13 @@ public class PingPong {
 
 	}
 	public Boolean validateInput(String userInput) {
+		Integer input = 0;
 		try {
-			Integer.parseInt(userInput);
-		} catch(NumberFormatException e) {
+			input = Integer.parseInt(userInput);
+				if(input < 0) {
+					return false;
+				}
+			} catch(NumberFormatException e) {
 			return false;
 		}
 		return true;

@@ -5,6 +5,14 @@ public class PingPong {
 	public static void main(String[] args) {
 
 	}
+	public Boolean validateInput(String userInput) {
+		try {
+			Integer.parseInt(userInput);
+		} catch(NumberFormatException e) {
+			return false;
+		}
+		return true;
+	}
 
 	public ArrayList<String> pingPong(Integer userInput) {
 		ArrayList<String> pingPongList  = new ArrayList<String>();
